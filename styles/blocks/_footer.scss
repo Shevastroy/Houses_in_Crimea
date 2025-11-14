@@ -1,0 +1,238 @@
+@use "../setup/helpers" as *;
+
+.section-footer {
+    padding-bottom: 70px;
+    font-family: var(--font-family-accent);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(36);
+    margin-bottom: rem(30);
+    
+    &-title {
+        color: var(--gold);
+        padding-bottom: rem(32);
+    }
+
+    &__adress,
+    &__phone {
+        margin-bottom: rem(24);
+        color: var(--blue);
+
+        &-title {
+            color: var(--blue);;
+            margin-bottom: rem(12);
+            opacity: .4;
+        }
+
+
+    }
+}
+
+
+
+.img {
+    border-style: none;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+ .footer__img {
+    margin: 24px 0;;
+}
+
+.request__form {
+    max-width: 282px;
+}
+
+.request__fields {
+    align-items: unset;
+    display: flex;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    justify-content: unset;
+}
+
+.request__inputWrap {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.request__field {
+    position: relative;
+}
+
+.request__input {
+    background: transparent;
+    border-radius: 8px;
+    color: var(--gold);
+    display: block;
+    height: 54px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    line-height: 126%;
+    letter-spacing: 0.05em;
+    border: var(--border-gold);
+
+    &::placeholder {
+    color: var(--gold);
+    text-overflow: ellipsis;
+}
+}
+
+.request__privacy {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+}
+
+.request__checkbox {
+    display: none;
+}
+
+.request__checkboxImg {
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--gold);
+    display: flex;
+    height: 14px;
+    justify-content: center;
+    width: 14px;
+    border-radius: 5px;
+}
+
+.request__checkboxCheck {
+    display: none;
+}
+
+.request__agreement {
+    color: var(--gold);
+    width: 100%;
+    font-size: 11px;
+    padding-left: 10px;
+    line-height: 126%;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+.request__checkbox:checked + .request__checkboxImg .request__checkboxCheck {
+    display: block;
+    height: 14px;
+    width: 14px;
+}
+
+.privacy_link {
+    text-decoration: underline;
+    display: inline;
+}
+
+.request__agreement a {
+    border-bottom: 1px solid var(--white);
+}
+
+.request__bottom {
+    margin-top: 12px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.request__submit {
+    font-size: 16px;
+    height: 67px;
+    line-height: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@include tablet-above {
+     .footer {
+        margin-top: rem(36);
+        margin-bottom: rem(30);
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: rem(24);
+            align-items: start;
+        }
+
+        &__container {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        &__form {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        &__img {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            justify-self: center;
+            align-self: center;   
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        &-title {
+            padding-bottom: rem(32);
+        }
+
+        &__adress,
+        &__phone {
+            margin-bottom: rem(24);
+        }
+    }
+}
+
+
+@include laptop-above {
+    .footer {
+        margin-top: rem(36);
+        margin-bottom: rem(30);
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: rem(24);
+            align-items: start;
+        }
+
+        &__container {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        &__form {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        &__img {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            justify-self: center;
+            align-self: center;   
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        &-title {
+            padding-bottom: rem(32);
+        }
+
+        &__adress,
+        &__phone {
+            margin-bottom: rem(24);
+        }
+    }
+}

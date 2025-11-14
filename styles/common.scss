@@ -1,0 +1,16 @@
+@use "./setup/helpers/mixins";
+@use "./setup/helpers/functions";
+@use "./setup/helpers/index";
+@use "./setup/helpers/media";
+
+@use "./setup/reset";
+@use "./setup/variables";
+@use "./setup/fonts";
+@use "./setup/globals";
+@use "./setup/utils";
+
+
+@use "./blocks/buttons";
+@use "./blocks/header";
+@use "./blocks/footer";
+@use "./blocks/burger";

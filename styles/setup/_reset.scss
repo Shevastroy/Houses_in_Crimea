@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+//  Delete padding left
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+ //  Delete margin
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+*,
+*:focus,
+*:hover,
+*:visited,
+*:active {
+    outline: none;
+    text-decoration: none;
+}
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-gutter: stable;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+    //height: 100%;
+    margin: 0;
+    line-height: 1.5;
+    min-height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl
+):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-size: 100%;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+button,
+select {
+    text-transform: none;
+    cursor: pointer;
+}
+input {
+    border: none;
+    background: none;
+}
+input[type="number"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+input[type="text"] {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+}
+caption {
+    text-align: inherit;
+}
+figure {
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    border-style: none;
+    height: auto;
+    // transform: translate3d(0px, 0px, .001px);
+}
+textarea {
+    overflow: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

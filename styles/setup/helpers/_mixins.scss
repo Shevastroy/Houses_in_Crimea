@@ -1,0 +1,65 @@
+@use 'sass:math';
+@use 'functions' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min)
+}
+
+//Скрывать элементы (плавный переход)
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+//Отображать элементы (плавный переход)
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+//Центрирование через flex 
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else  {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+//Центрирование через абсолютное позиционирование
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+ //Рисует квадрат
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+//Скрывать элементы
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@mixin flex($display: flex, $dir: row, $wrap: nowrap, $jc: center, $ai: center) {
+    display: $display;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}

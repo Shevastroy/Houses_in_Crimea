@@ -1,0 +1,38 @@
+@use 'helpers' as *;
+
+:root {
+    /* ---------- Colors ---------- */
+    --white: #FCFAF3;
+    --blue: #305B67;
+    --gold: #C39B54;
+    --gray: #688185;
+    --light-gray: #E0DDD2;
+    --black: #000000;
+    --error: #ff0000;
+    --bg-1: #E0DDD2;
+    --bg-2: #33466b;
+
+    --border-gold: #{rem(1)} solid var(--gold); 
+    --border-white: #{rem(1)} solid var(--white);
+    --border-blue: #{rem(1)} solid var(--blue);
+
+
+    /* ---------- Fonts ---------- */
+    --font-family-base: 'Tenor Sans', sans-serif;
+    --font-family-accent: 'Exo 2', sans-serif;
+    --font-helper: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --family-titles: "Jost", var(--font-helper);
+
+    /* ---------- container size ---------- */
+    --container-width: #{rem(1535)};
+    --container-padding-x: #{rem(16)};
+
+
+    --transition-duration: 0.2s;
+
+
+    @include laptop {
+        --container-width: #{rem(1280)};
+    }
+
+}

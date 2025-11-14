@@ -1,0 +1,108 @@
+@use "../../setup/helpers" as *;
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: rem(12);
+    font-weight: 600;
+    padding-left: rem(16);
+    padding-right: rem(16);
+
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-shrink: 0;
+        width: 85px;
+    
+        &-name {
+            color: var(--gold);
+        }       
+
+        &-img {
+            border-radius: 50%;
+            margin-top: rem(12);
+            max-width: rem(52);
+        }
+    }
+
+    &_item-line {
+        background-color: var(--white);
+        height: 1px;
+        margin-top: 42px;
+        width: 30%;
+        }
+
+    @include laptop-above {
+        margin-left: clamp(rem(18), 8.75vw, rem(168));
+        margin-right: clamp(rem(18), 8.75vw, rem(168));
+        margin-bottom: clamp(rem(14), 3.5vw, rem(144));
+        font-size: rem(16);
+
+            &__item {
+            &-img {
+                max-width: clamp(rem(52), 3.75vw, rem(72));
+            }
+        }
+
+    }
+
+}
+.hero__slide {
+    @include flex();
+    height: 100vh;
+    position: relative;
+    height: 100vh;
+    
+    .hero__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: brightness(0.8);
+    }
+    
+    .hero__title {
+        padding-top: 42px;
+        margin-bottom: 24px;
+        position: absolute;
+        color: white;
+        width: 100%;
+        text-align: center;
+        top: clamp(6.25rem, 10.42vw, 12.5rem);
+        z-index: 4;
+    }
+}
+
+.hero__slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero__container {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 48%;
+    left: 50%;
+    padding-bottom: 24px;
+    transform: translateX(-50%);
+    z-index: 999;
+    }
+
+.button-hero {
+    display: block;
+    margin: 0 auto;
+}
+
