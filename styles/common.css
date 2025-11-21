@@ -476,7 +476,7 @@ button[aria-label]::before {
 .header__body.is-scrolled {
   background-color: var(--white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding-bottom: clamp(0.3125rem, 2.5vw, 0.8125rem);
+  transition: all 0.3s ease;
 }
 .header__overlay {
   position: fixed;
@@ -491,7 +491,7 @@ button[aria-label]::before {
   color: var(--white);
   transition-duration: var(--transition-duration);
   opacity: 0;
-  max-width: clamp(230px, 27vw, 430px);
+  max-width: clamp(230px, 22.4vw, 430px);
   z-index: 6;
 }
 .header__overlay.is-active {
@@ -527,10 +527,10 @@ button[aria-label]::before {
   display: flex;
 }
 .header__logo .logo__image {
-  width: clamp(4rem, 9vw, 9.375rem);
+  width: clamp(4rem, 7.81vw, 9.375rem);
 }
 .header__phone-link .logo__image {
-  width: clamp(1.4375rem, 3.5vw, 2.1875rem);
+  width: clamp(1.4375rem, 1.82vw, 2.1875rem);
 }
 @media (min-width: 90.06125rem) {
   .header__phone, .header__leave-request-link {
@@ -808,7 +808,7 @@ button[aria-label]::before {
   height: 0.0625rem;
   background-color: currentColor;
   border-radius: 1rem;
-  transition-duration: var(--transtition-duration);
+  transition-duration: var(--transition-duration);
 }
 .burger-button__line:nth-child(3) {
   width: 71%;

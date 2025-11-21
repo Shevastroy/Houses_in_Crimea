@@ -67,7 +67,7 @@ class Header {
         this.bodyElement.style.transition = 'background-color 0.3s ease';
         this.burgerButtonElement.style.color = isScrolled ? 'var(--gold)' : 'white';
         this.logoImages.forEach((img) => {
-            img.style.display = img.src.includes(isScrolled ? 'logo-gold' : 'logo-white')
+            img.style.display = img.src.includes(isScrolled ? 'logo_gold' : 'logo_white')
                 ? 'block'
                 : 'none';
         });

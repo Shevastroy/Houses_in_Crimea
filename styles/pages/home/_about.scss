@@ -1,16 +1,11 @@
 @use "../../setup/helpers" as *;
 
 .section-about {
-    background-image: url(./img/about-mobile.png);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
+    background: url(../../../img/about-mobile.png) bottom right / cover no-repeat;
     background-size: rem(350);
 
     @include laptop-above {
-        background-image: url(./img/about-fon.png);
-        background-position: 100% 100%;
-        background-repeat: no-repeat;
-        background-size: rem(1920);
+        background: url(../../../img/about-fon.png) bottom right / cover no-repeat;
     }
 }
 

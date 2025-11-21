@@ -26,7 +26,7 @@
         &.is-scrolled {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding-bottom: clamp(rem(5), 2.5vw, rem(13));;
+            transition: all 0.3s ease;
         }
 
     }
@@ -44,7 +44,7 @@
         color: var(--white);
         transition-duration: var(--transition-duration);
         opacity: 0;
-        max-width: clamp(230px, 27vw, 430px);
+        max-width: clamp(230px, 22.4vw, 430px);
         z-index: 6;
    
         &.is-active {
@@ -87,13 +87,13 @@
 
     &__logo {
         .logo__image{
-        width: clamp(rem(64), 9vw, rem(150));
+        width: clamp(rem(64), 7.81vw, rem(150));
         }
     }
 
     &__phone-link {
         .logo__image {
-            width: clamp(rem(23), 3.5vw, rem(35));
+            width: clamp(rem(23), 1.82vw, rem(35));
         }
     }
 
